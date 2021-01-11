@@ -10802,7 +10802,86 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
-.navAsegurados__icon {
+.navAsegurados {
+  width: 100%;
+  height: 40px;
+  padding: 0;
+}
+
+.navAsegurados .navAsegurados__botonDesplegable {
+  border: none;
+}
+
+.navAsegurados .navAsegurados__icon {
   font-size: 1rem;
+}
+
+.navAsegurados .navAsegurados__logo {
+  width: 85%;
+  text-align: center;
+  line-height: 15px;
+  margin: 0;
+}
+
+.navAsegurados .navAsegurados__logo .navAsegurados__img-logo {
+  width: 130px;
+  height: auto;
+  text-align: center;
+}
+
+.navAsegurados .navAsegurados__barraDesplegable {
+  padding: 10px;
+}
+
+.navAsegurados .navAsegurados__barraDesplegable .navAsegurados__contenedorBarraDesplegable {
+  margin: 5px 0 5px 10px;
+  padding: 0 15px;
+  border-left: 2px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.navAsegurados .navAsegurados__barraDesplegable .navAsegurados__contenedorBarraDesplegable .navAsegurados__lista {
+  line-height: 1rem;
+}
+
+.navAsegurados .navAsegurados__barraDesplegable .navAsegurados__contenedorBarraDesplegable .navAsegurados__lista .navAsegurados__itemLista {
+  list-style: none;
+}
+
+.navAsegurados .navAsegurados__barraDesplegable .navAsegurados__contenedorBarraDesplegable .navAsegurados__lista .navAsegurados__itemLista .navAsegurados__enlaceLista {
+  color: #fff;
+}
+
+.navAsegurados .navAsegurados__barraDesplegable .navAsegurados__contenedorBarraDesplegable .navAsegurados__lista .navAsegurados__itemLista .navAsegurados__enlaceLista::after,
+.navAsegurados .navAsegurados__barraDesplegable .navAsegurados__contenedorBarraDesplegable .navAsegurados__lista .navAsegurados__itemLista .navAsegurados__enlaceLista .after {
+  margin-left: 9.255rem;
+  background-image: url("../img/arrow-down.svg");
+  background-size: cover;
+}
+
+.navAsegurados .navAsegurados__barraDesplegable .navAsegurados__contenedorBarraDesplegable .navAsegurados__lista .navAsegurados__itemLista .navAsegurados__contenedorSubLista {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navAsegurados .navAsegurados__barraDesplegable .navAsegurados__contenedorBarraDesplegable .navAsegurados__lista .navAsegurados__itemLista .navAsegurados__contenedorSubLista .navAsegurados__subLista {
+  padding: 0;
+  margin-left: 20px;
+}
+
+.navAsegurados .navAsegurados__barraDesplegable .navAsegurados__contenedorBarraDesplegable .navAsegurados__lista .navAsegurados__itemLista .navAsegurados__contenedorSubLista .navAsegurados__subLista .navAsegurados__itemSubLista {
+  list-style-type: disc;
+  color: #fff;
 }
 /*# sourceMappingURL=bootstrap.css.map */

@@ -1,0 +1,61 @@
+.navAsegurados {
+    @include size(100%, 40px);
+    padding: 0;
+    .navAsegurados__botonDesplegable {
+        border: none;
+    }
+    .navAsegurados__icon {
+        font-size: 1rem;
+    }
+    .navAsegurados__logo {
+        width: 85%;
+        text-align: center;
+        line-height: 15px;
+        margin: 0;
+        .navAsegurados__img-logo {
+            @include size(130px, auto);
+            text-align: center;
+        }
+    }
+    .navAsegurados__barraDesplegable{
+        padding: 10px;
+        .navAsegurados__contenedorBarraDesplegable{
+            margin: 5px 0 5px 10px;
+            padding: 0 15px;
+            border-left: 2px solid white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            .navAsegurados__lista {
+                line-height: 1rem;
+                .navAsegurados__itemLista {
+                    list-style: none;
+                    .navAsegurados__enlaceLista{
+                        color: $white;
+                        &::after,
+                        .after {
+                            margin-left: 9.255rem;
+                            background-image: url("../img/arrow-down.svg");
+                            background-size: cover;
+                        }
+                    }
+                    .navAsegurados__contenedorSubLista {
+                        background-color: transparent;
+                        border: none;
+                        padding: 0;
+                        margin: 0;
+                        .navAsegurados__subLista {
+                            padding: 0;
+                            margin-left: 20px;
+                            .navAsegurados__itemSubLista {
+                                list-style-type: disc;
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
