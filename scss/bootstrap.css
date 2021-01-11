@@ -10884,4 +10884,72 @@ a.text-dark:hover, a.text-dark:focus {
   list-style-type: disc;
   color: #fff;
 }
+
+.inicial {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+}
+
+.inicial .inicial__contenedor {
+  width: 100%;
+  height: 50%;
+}
+
+.inicial .inicial__contenedor .inicial__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.inicial .formulario {
+  width: 85%;
+  height: 230px;
+  position: absolute;
+  top: 40%;
+  left: 8%;
+  background-color: #ccc;
+}
+
+.inicial .formulario .fomulario__container {
+  padding: 15px 10px;
+}
+
+.inicial .formulario .fomulario__container .formulario__descripcion {
+  width: 100%;
+  height: 100%;
+}
+
+.inicial .formulario .fomulario__container .formulario__descripcion .formulario__seleccion {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.inicial .formulario .fomulario__container .formulario__descripcion .formulario__seleccion .formulario__seleccionar::after {
+  content: "\025be";
+  display: table-cell;
+  text-align: center;
+}
+
+.inicial .formulario .fomulario__container .formulario__descripcion .formulario__seleccion--long {
+  width: 70%;
+  height: auto;
+}
+
+.inicial .formulario .fomulario__container .formulario__descripcion .formulario__seleccion--small {
+  width: 30%;
+  height: auto;
+}
+
+.inicial .formulario .fomulario__container .formulario__descripcion .formulario__boton {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.inicial .formulario .fomulario__container .formulario__descripcion .formulario__boton .formulario__btn {
+  width: 100%;
+  height: auto;
+}
 /*# sourceMappingURL=bootstrap.css.map */

@@ -1,0 +1,48 @@
+.inicial {
+    @include size (100%, 70vh);
+    position: relative;
+    .inicial__contenedor {
+        @include size (100%, 50%);
+        .inicial__img {
+            @include size (100%, 100%);
+            object-fit: cover;
+        }
+    }
+    .formulario {
+        @include size (85%, 230px);
+        position: absolute;
+        top: 40%;
+        left: 8%;
+        background-color: #ccc;
+        .fomulario__container {
+            padding: 15px 10px;
+            .formulario__descripcion {
+                @include size (100%, 100%);
+                .formulario__seleccion {
+                    margin-bottom: 0;
+                    width: 100%;
+                    .formulario__seleccionar{
+                        &::after {
+                            content: "\025be";
+                            display: table-cell;
+                            text-align: center;
+                        }
+                    }
+                    &--long{
+                        @include size (70%, auto);
+                    }
+                    &--small{
+                        @include size (30%, auto);
+                    }
+                }
+                .formulario__boton {
+                    @include size(100%, auto);
+                    margin-top: 10px;
+                    .formulario__btn {
+                        @include size (100%,auto);
+                    }
+                }
+            }
+        }
+    }
+}
