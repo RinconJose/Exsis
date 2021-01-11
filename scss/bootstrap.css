@@ -5026,6 +5026,10 @@ input[type="button"].btn-block {
   background-image: url("../img/logo-hamburguesa.svg");
 }
 
+.navbar-dark .navbar-toggler-icon--x {
+  background-image: url("../img/x.svg");
+}
+
 .navbar-dark .navbar-text {
   color: rgba(255, 255, 255, 0.5);
 }
@@ -10806,16 +10810,20 @@ a.text-dark:hover, a.text-dark:focus {
   position: fixed;
   z-index: 1000;
   width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .menuInicial .navAsegurados {
   width: 100%;
   height: 40px;
+  position: relative;
   padding: 0;
 }
 
 .menuInicial .navAsegurados .navAsegurados__botonDesplegable {
   border: none;
+  position: absolute;
 }
 
 .menuInicial .navAsegurados .navAsegurados__icon {
@@ -10823,9 +10831,8 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .menuInicial .navAsegurados .navAsegurados__logo {
-  width: 85%;
+  width: 100%;
   text-align: center;
-  line-height: 15px;
   margin: 0;
 }
 
@@ -10891,25 +10898,82 @@ a.text-dark:hover, a.text-dark:focus {
   color: #fff;
 }
 
-.inicial {
+.portada {
   width: 100%;
   height: 70vh;
+  margin-bottom: 5px;
   position: relative;
 }
 
-.inicial .inicial__contenedor {
+.portada .textPrincipal {
   width: 100%;
-  height: 50%;
+  height: 15vh;
+  margin: 40px 0 15px 0;
 }
 
-.inicial .inicial__contenedor .inicial__img {
+.portada .textPrincipal .textPrincipal__contenedor {
+  width: 100%;
+  padding: 0;
+}
+
+.portada .textPrincipal .textPrincipal__contenedor .textPrincipal__contenido {
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  padding: 5px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 25px;
+}
+
+.portada .textPrincipal .textPrincipal__contenedor .textPrincipal__contenido .textPrincipal__titulo {
+  font-size: 30px;
+  color: #9799eb;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.portada .inicial {
+  width: 100%;
+  height: 20vh;
+  margin: 0;
+}
+
+.portada .inicial .inicial__contenedor {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.portada .inicial .inicial__contenedor .inicial__carousel {
+  width: 100%;
+  height: 100%;
+}
+
+.portada .inicial .inicial__contenedor .inicial__carousel .inicial__contendorImagenes {
+  width: 100%;
+  height: 100%;
+}
+
+.portada .inicial .inicial__contenedor .inicial__carousel .inicial__contendorImagenes .inicial__img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.inicial .formulario {
+.portada .formulario {
   width: 85%;
   height: 230px;
   position: absolute;
@@ -10918,43 +10982,43 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: #ccc;
 }
 
-.inicial .formulario .fomulario__container {
+.portada .formulario .fomulario__container {
   padding: 15px 10px;
 }
 
-.inicial .formulario .fomulario__container .formulario__descripcion {
+.portada .formulario .fomulario__container .formulario__descripcion {
   width: 100%;
   height: 100%;
 }
 
-.inicial .formulario .fomulario__container .formulario__descripcion .formulario__seleccion {
+.portada .formulario .fomulario__container .formulario__descripcion .formulario__seleccion {
   margin-bottom: 0;
   width: 100%;
 }
 
-.inicial .formulario .fomulario__container .formulario__descripcion .formulario__seleccion .formulario__seleccionar::after {
+.portada .formulario .fomulario__container .formulario__descripcion .formulario__seleccion .formulario__seleccionar::after {
   content: "\025be";
   display: table-cell;
   text-align: center;
 }
 
-.inicial .formulario .fomulario__container .formulario__descripcion .formulario__seleccion--long {
+.portada .formulario .fomulario__container .formulario__descripcion .formulario__seleccion--long {
   width: 70%;
   height: auto;
 }
 
-.inicial .formulario .fomulario__container .formulario__descripcion .formulario__seleccion--small {
+.portada .formulario .fomulario__container .formulario__descripcion .formulario__seleccion--small {
   width: 30%;
   height: auto;
 }
 
-.inicial .formulario .fomulario__container .formulario__descripcion .formulario__boton {
+.portada .formulario .fomulario__container .formulario__descripcion .formulario__boton {
   width: 100%;
   height: auto;
   margin-top: 10px;
 }
 
-.inicial .formulario .fomulario__container .formulario__descripcion .formulario__boton .formulario__btn {
+.portada .formulario .fomulario__container .formulario__descripcion .formulario__boton .formulario__btn {
   width: 100%;
   height: auto;
 }
@@ -10970,6 +11034,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .piePagina .piePagina__contenedor .piePagina__superior {
+  height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11016,6 +11081,7 @@ a.text-dark:hover, a.text-dark:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 .piePagina .piePagina__contenedor .piePagina__superior .piePagina__derecho .piePagina__titulo {
@@ -11041,24 +11107,30 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .piePagina .piePagina__contenedor .piePagina__superior .piePagina__derecho .piePagina__redesSociales .piePagina__enlaceRedes {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   background-color: #fff;
   border-radius: 100%;
   text-align: center;
 }
 
 .piePagina .piePagina__contenedor .piePagina__superior .piePagina__derecho .piePagina__redesSociales .piePagina__enlaceRedes .piePagina__red {
-  line-height: 35px;
+  line-height: 20px;
+  font-size: 15px;
   color: rgba(146, 145, 145, 0.658);
 }
 
 .piePagina .piePagina__contenedor .piePagina__inferior .piePagina__base {
+  height: 10%;
+  padding: 0;
   background-color: black;
   text-align: center;
 }
 
 .piePagina .piePagina__contenedor .piePagina__inferior .piePagina__base .piePagina__texto {
   color: #fff;
+  font-size: 15px;
+  padding: 5px;
+  margin: 0;
 }
 /*# sourceMappingURL=bootstrap.css.map */

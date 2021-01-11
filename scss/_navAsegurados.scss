@@ -2,19 +2,22 @@
     position: fixed;
     z-index: 1000;
     width: 100%;
+    top: 0;
+    left: 0;
     .navAsegurados {
         @include size(100%, 40px);
+        position: relative;
         padding: 0;
         .navAsegurados__botonDesplegable {
             border: none;
+            position: absolute;
         }
         .navAsegurados__icon {
             font-size: 1rem;
         }
         .navAsegurados__logo {
-            width: 85%;
+            width: 100%;
             text-align: center;
-            line-height: 15px;
             margin: 0;
             .navAsegurados__img-logo {
                 @include size(130px, auto);
