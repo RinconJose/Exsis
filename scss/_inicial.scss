@@ -1,11 +1,50 @@
-.inicial {
+.portada {
     @include size (100%, 70vh);
+    margin-bottom: 5px;
     position: relative;
-    .inicial__contenedor {
-        @include size (100%, 50%);
-        .inicial__img {
+    .textPrincipal {
+        width: 100%;
+        height: 15vh;
+        margin: 40px 0 15px 0;
+        .textPrincipal__contenedor {
+            width: 100%;
+            padding: 0;
+            .textPrincipal__contenido {
+                @include size (100%,100%);
+                margin-top: 10px;
+                padding: 5px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                line-height: 25px;
+                .textPrincipal__titulo {
+                    font-size: 30px;
+                    color: rgb(151, 153, 235);
+                    font-weight: 600;
+                    margin-bottom: 2px;
+                }
+            }
+        }
+    }
+    .inicial{
+        width: 100%;
+        height: 20vh;
+        margin: 0;
+        .inicial__contenedor {
             @include size (100%, 100%);
-            object-fit: cover;
+            padding: 0;
+            .inicial__carousel{
+                @include size (100%,100%);
+                .inicial__contendorImagenes{
+                    @include size (100%, 100%);
+                    .inicial__img {
+                        @include size (100%, 100%);
+                        object-fit: cover;
+                    }
+                }
+            }
         }
     }
     .formulario {
