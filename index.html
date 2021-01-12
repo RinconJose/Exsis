@@ -11,7 +11,7 @@
 <body>
     <header class="menuInicial">
         <div class="contenedor">
-            <nav class="navAsegurados navbar navbar-expand-lg navbar-dark bg-secondary">
+            <nav class="navAsegurados navbar navbar-expand-xl navbar-dark bg-secondary">
                 <button
                 class="navAsegurados__botonDesplegable navbar-toggler"
                 onclick="return iconoDiferente()"
@@ -27,27 +27,27 @@
                 <a href="./index.html" class="navAsegurados__logo navbar-brand">
                     <img src="./img/Asegurados.com.svg" alt="" class="navAsegurados__img-logo img-fluid">
                 </a>
-                <div class="navAsegurados__barraDesplegable collapse navbar-collapse bg-dark" id="menu">
+                <div class="navAsegurados__barraDesplegable collapse navbar-collapse" id="menu">
                     <div class="navAsegurados__contenedorBarraDesplegable">
                         <ul class="navAsegurados__lista navbar-nav">
                             <li class="navAsegurados__itemLista nav-item">
-                                <a href="#" class="navAsegurados__enlaceLista nav-link dropdown-toggle" id="menu__categoria" data-toggle="dropdown" aria-haspopup="true">Acerca de nosotros</a>
+                                <a href="#" class="navAsegurados__enlaceLista navAsegurados__enlaceLista--lg nav-link dropdown-toggle" id="menu__categoria" data-toggle="dropdown" aria-haspopup="true">Acerca de nosotros</a>
                                 <div class="navAsegurados__contenedorSubLista dropdown-menu" aria-labelledby="menu__categoria">
                                     <ul class="navAsegurados__subLista">
                                         <li class="navAsegurados__itemSubLista">
-                                            <a href="#" class="navAsegurados__enlaceLista dropdown-item text-white pl-1">Misión</a>
+                                            <a href="#" class="navAsegurados__enlaceLista navAsegurados__enlaceLista--lg dropdown-item text-white pl-1">Misión</a>
                                         </li>
                                         <li class="navAsegurados__itemSubLista">
-                                            <a href="#" class="navAsegurados__enlaceLista dropdown-item text-white pl-1">Visión</a>
+                                            <a href="#" class="navAsegurados__enlaceLista navAsegurados__enlaceLista--lg dropdown-item text-white pl-1">Visión</a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
                             <li class="navAsegurados__itemLista nav-item">
-                                <a href="#" class="navAsegurados__enlaceLista nav-link">Descarga tu Poliza</a>
+                                <a href="#" class="navAsegurados__enlaceLista navAsegurados__enlaceLista--lg nav-link">Descarga tu Poliza</a>
                             </li>
                             <li class="navAsegurados__itemLista nav-item">
-                                <a href="#" class="navAsegurados__enlaceLista nav-link">Terminos y condiciones</a>
+                                <a href="./Terminos.PDF" download class="navAsegurados__enlaceLista navAsegurados__enlaceLista--lg nav-link">Terminos y condiciones</a>
                             </li>
                         </ul>
                     </div>
@@ -65,68 +65,70 @@
                     </div>
                 </div>
             </section>
-            <section class="inicial row">
-                <div class="inicial__contenedor container-fluid">
-                    <div class="inicial__carousel carousel slide" id="carouselPrincipal" data-ride="carousel">
-                        <div class="inicial__contendorImagenes carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="./img/pexels-marcelo-solis-4579090.jpg" class="d-block w-100 inicial__img img-fluid" alt="">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="./img/pexels-marcelo-solis-4579090.jpg" class="d-block w-100 inicial__img img-fluid" alt="">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="./img/pexels-marcelo-solis-4579090.jpg" class="d-block w-100 inicial__img img-fluid" alt="">
+            <div class="cintainerInicial">
+                <section class="inicial row">
+                    <div class="inicial__contenedor container-fluid">
+                        <div class="inicial__carousel carousel slide" id="carouselPrincipal" data-ride="carousel">
+                            <div class="inicial__contendorImagenes carousel-inner">
+                                <div class="inicial__listaImagenes carousel-item active">
+                                    <img src="./img/pexels-marcelo-solis-4579090.jpg" class="d-block w-100 inicial__img img-fluid" alt="">
+                                </div>
+                                <div class="inicial__listaImagenes carousel-item">
+                                    <img src="./img/pexels-marcelo-solis-4579090.jpg" class="d-block w-100 inicial__img img-fluid" alt="">
+                                </div>
+                                <div class="inicial__listaImagenes carousel-item">
+                                    <img src="./img/pexels-marcelo-solis-4579090.jpg" class="d-block w-100 inicial__img img-fluid" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="formulario row mx-auto">
-                <div class="fomulario__container col-12">
-                    <form class="formulario__descripcion">
-                        <div class="formulario__seleccion form-inline">
-                            <label for="marca" class="formulario__label"></label>
-                            <select class="formulario__seleccion form-control" id="marca">
-                                <option class="formulario__opcion">Marca del auto</option>
-                                <option class="formulario__opcion">2</option>
-                                <option class="formulario__opcion">3</option>
-                                <option class="formulario__opcion">4</option>
-                                <option class="formulario__opcion">5</option>
-                            </select>
-                        </div>
-                        <div class="formulario__seleccion form-inline">
-                            <label for="modelo" class="formulario__label"></label>
-                            <select class="formulario__seleccion--long form-control" id="modelo">
-                                <option class="formulario__opcion">Modelo del auto</option>
-                                <option class="formulario__opcion">2</option>
-                                <option class="formulario__opcion">3</option>
-                                <option class="formulario__opcion">4</option>
-                                <option class="formulario__opcion">5</option>
-                            </select>
-                            <label for="ano" class="formulario__label"></label>
-                            <select class="formulario__seleccion--small form-control" id="ano">
-                                <option class="formulario__opcion">Año</option>
-                                <option class="formulario__opcion">2</option>
-                                <option class="formulario__opcion">3</option>
-                                <option class="formulario__opcion">4</option>
-                                <option class="formulario__opcion">5</option>
-                            </select>
-                        </div>
-                        <div class="formulario__seleccion form-inline">
-                            <label for="correo" class="formulario__label"></label>
-                            <input type="email" class="formulario__seleccion form-control" id="correo" placeholder="Email">
-                        </div>
-                        <div class="formulario__seleccion form-inline">
-                            <label for="tlf" class="formulario__label"></label>
-                            <input type="tel" class="formulario__seleccion form-control" id="tlf" placeholder="Teléfono celular">
-                        </div>
-                        <div class="formulario__boton">
-                            <button type="submit" class="formulario__btn btn btn-success">Cotizar ahora</button>
-                        </div>
-                    </form>
-                </div>
-            </section>
+                </section>
+                <section class="formulario row mx-auto">
+                    <div class="fomulario__container col-12">
+                        <form class="formulario__descripcion">
+                            <div class="formulario__seleccion form-inline">
+                                <label for="marca" class="formulario__label">Marca auto</label>
+                                <select class="formulario__seleccion form-control" id="marca">
+                                    <option class="formulario__opcion">Marca del auto</option>
+                                    <option class="formulario__opcion">Ford</option>
+                                    <option class="formulario__opcion">Chevrolet</option>
+                                    <option class="formulario__opcion">Nissan</option>
+                                    <option class="formulario__opcion">Jeep</option>
+                                </select>
+                            </div>
+                            <div class="formulario__seleccion form-inline">
+                                <label for="modelo" class="formulario__label">Modelo del auto</label>
+                                <select class="formulario__seleccion--long form-control" id="modelo">
+                                    <option class="formulario__opcion">Modelo del auto</option>
+                                    <option class="formulario__opcion">Aveo</option>
+                                    <option class="formulario__opcion">Spark</option>
+                                    <option class="formulario__opcion">Picanto</option>
+                                    <option class="formulario__opcion">Clio</option>
+                                </select>
+                                <label for="ano" class="formulario__label">Año</label>
+                                <select class="formulario__seleccion--small form-control" id="ano">
+                                    <option class="formulario__opcion">Año</option>
+                                    <option class="formulario__opcion">2021</option>
+                                    <option class="formulario__opcion">2020</option>
+                                    <option class="formulario__opcion">2019</option>
+                                    <option class="formulario__opcion">2018</option>
+                                </select>
+                            </div>
+                            <div class="formulario__seleccion form-inline">
+                                <label for="correo" class="formulario__label">Email</label>
+                                <input type="email" class="formulario__seleccion form-control" id="correo" placeholder="Email">
+                            </div>
+                            <div class="formulario__seleccion form-inline">
+                                <label for="tlf" class="formulario__label">Teléfono celular</label>
+                                <input type="tel" class="formulario__seleccion form-control" id="tlf" placeholder="Teléfono celular">
+                            </div>
+                            <div class="formulario__boton">
+                                <button type="submit" class="formulario__btn btn btn-success">Cotizar ahora</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
         </section>
     </main>
     <footer class="piePagina">
@@ -148,13 +150,13 @@
                 <div class="piePagina__derecho col-6">
                     <p class="piePagina__titulo">Síguenos en nuestras redes sociales</p>
                     <div class="piePagina__redesSociales">
-                        <a href="#" class="piePagina__enlaceRedes">
+                        <a href="https://www.facebook.com/" class="piePagina__enlaceRedes" target="_blank">
                             <i class="piePagina__red fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="piePagina__enlaceRedes">
+                        <a href="https://www.youtube.com/" class="piePagina__enlaceRedes" target="_blank">
                             <i class="piePagina__red fab fa-youtube"></i>
                         </a>
-                        <a href="#" class="piePagina__enlaceRedes">
+                        <a href="https://www.instagram.com/" class="piePagina__enlaceRedes" target="_blank">
                             <i class="piePagina__red fab fa-instagram"></i>
                         </a>
                     </div>
