@@ -35,10 +35,10 @@
                                 <div class="navAsegurados__contenedorSubLista dropdown-menu" aria-labelledby="menu__categoria">
                                     <ul class="navAsegurados__subLista">
                                         <li class="navAsegurados__itemSubLista">
-                                            <a href="#" class="navAsegurados__enlaceLista navAsegurados__enlaceLista--lg dropdown-item text-white pl-1">Misión</a>
+                                            <a href="#" class="navAsegurados__enlaceLista navAsegurados__enlaceLista--lg dropdown-item pl-1">Misión</a>
                                         </li>
                                         <li class="navAsegurados__itemSubLista">
-                                            <a href="#" class="navAsegurados__enlaceLista navAsegurados__enlaceLista--lg dropdown-item text-white pl-1">Visión</a>
+                                            <a href="#" class="navAsegurados__enlaceLista navAsegurados__enlaceLista--lg dropdown-item pl-1">Visión</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -68,16 +68,29 @@
             <div class="cintainerInicial">
                 <section class="inicial row">
                     <div class="inicial__contenedor container-fluid">
-                        <div class="inicial__carousel carousel slide" id="carouselPrincipal" data-ride="carousel">
+                        <div class="inicial__carousel carousel slide" id="carouselPrincipal" data-ride="carousel" data-interval="false">
+                            <ol class="carousel-indicators">
+                                <li dara-target="carouselPrincipal" data-slide-to="0">1</li>
+                                <li dara-target="carouselPrincipal" data-slide-to="1">2</li>
+                                <li dara-target="carouselPrincipal" data-slide-to="2">3</li>
+                            </ol>
+                            <a href="#carouselPrincipal" class="inicial__btn inicial__btn--left carousel-control-prev" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next inicial__btn inicial__btn--right" href="#carouselPrincipal" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
                             <div class="inicial__contendorImagenes carousel-inner">
                                 <div class="inicial__listaImagenes carousel-item active">
-                                    <img src="./img/pexels-marcelo-solis-4579090.jpg" class="d-block w-100 inicial__img img-fluid" alt="">
+                                    <img src="./img/edificio1.jpeg" class="d-block w-100 inicial__img img-fluid" alt="">
                                 </div>
                                 <div class="inicial__listaImagenes carousel-item">
-                                    <img src="./img/pexels-marcelo-solis-4579090.jpg" class="d-block w-100 inicial__img img-fluid" alt="">
+                                    <img src="./img/edificio2.jpeg" class="d-block w-100 inicial__img img-fluid" alt="">
                                 </div>
                                 <div class="inicial__listaImagenes carousel-item">
-                                    <img src="./img/pexels-marcelo-solis-4579090.jpg" class="d-block w-100 inicial__img img-fluid" alt="">
+                                    <img src="./img/edificio3.jpeg" class="d-block w-100 inicial__img img-fluid" alt="">
                                 </div>
                             </div>
                         </div>
@@ -88,42 +101,80 @@
                         <form class="formulario__descripcion">
                             <div class="formulario__seleccion form-inline">
                                 <label for="marca" class="formulario__label">Marca auto</label>
-                                <select class="formulario__seleccion form-control" id="marca">
-                                    <option class="formulario__opcion">Marca del auto</option>
-                                    <option class="formulario__opcion">Ford</option>
-                                    <option class="formulario__opcion">Chevrolet</option>
-                                    <option class="formulario__opcion">Nissan</option>
-                                    <option class="formulario__opcion">Jeep</option>
-                                </select>
+                                <div class="formulario__errorPosicion">
+                                    <select class="formulario__seleccion form-control" id="marca">
+                                        <option value="" class="formulario__opcion">Marca del auto</option>
+                                        <option value="1" class="formulario__opcion">Ford</option>
+                                        <option value="2" class="formulario__opcion">Chevrolet</option>
+                                        <option value="3" class="formulario__opcion">Nissan</option>
+                                        <option value="4" class="formulario__opcion">Jeep</option>
+                                    </select>
+                                    <span id="errorMarca" class="error"></span>
+                                </div>
                             </div>
-                            <div class="formulario__seleccion form-inline">
-                                <label for="modelo" class="formulario__label">Modelo del auto</label>
-                                <select class="formulario__seleccion--long form-control" id="modelo">
-                                    <option class="formulario__opcion">Modelo del auto</option>
-                                    <option class="formulario__opcion">Aveo</option>
-                                    <option class="formulario__opcion">Spark</option>
-                                    <option class="formulario__opcion">Picanto</option>
-                                    <option class="formulario__opcion">Clio</option>
-                                </select>
-                                <label for="ano" class="formulario__label">Año</label>
-                                <select class="formulario__seleccion--small form-control" id="ano">
-                                    <option class="formulario__opcion">Año</option>
-                                    <option class="formulario__opcion">2021</option>
-                                    <option class="formulario__opcion">2020</option>
-                                    <option class="formulario__opcion">2019</option>
-                                    <option class="formulario__opcion">2018</option>
-                                </select>
+                            <div class="formulario__seleccion formulario__seleccion--vehiculos form-group">
+                                <div class="formulario__modelo">
+                                    <label for="modelo" class="formulario__label">Modelo del auto</label>
+                                    <div class="formulario__errorPosicion">
+                                        <select class="formulario__seleccion--long form-control" id="modelo">
+                                            <option value="" class="formulario__opcion">Modelo del auto</option>
+                                            <option value="1" class="formulario__opcion">Aveo</option>
+                                            <option value="2" class="formulario__opcion">Spark</option>
+                                            <option value="3" class="formulario__opcion">Picanto</option>
+                                            <option value="4" class="formulario__opcion">Clio</option>
+                                        </select>
+                                        <span id="errorModelo" class="error"></span>
+                                    </div>
+                                </div>
+                                <div class="formulario__ano">
+                                    <label for="ano" class="formulario__label">Año</label>
+                                    <div class="formulario__errorPosicion">
+                                        <select class="formulario__seleccion--small form-control" id="ano">
+                                            <option value="" class="formulario__opcion">Año</option>
+                                            <option value="1" class="formulario__opcion">2021</option>
+                                            <option value="2" class="formulario__opcion">2020</option>
+                                            <option value="3" class="formulario__opcion">2019</option>
+                                            <option value="4" class="formulario__opcion">2018</option>
+                                        </select>
+                                        <span id="errorAno" class="error"></span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="formulario__seleccion form-inline">
                                 <label for="correo" class="formulario__label">Email</label>
-                                <input type="email" class="formulario__seleccion form-control" id="correo" placeholder="Email">
+                                <div class="formulario__errorPosicion">
+                                    <input type="email" class="formulario__seleccion form-control" id="correo" placeholder="Email">
+                                    <span id="errorCorreo" class="error"></span>
+                                </div>
                             </div>
                             <div class="formulario__seleccion form-inline">
                                 <label for="tlf" class="formulario__label">Teléfono celular</label>
-                                <input type="tel" class="formulario__seleccion form-control" id="tlf" placeholder="Teléfono celular">
+                                <div class="formulario__errorPosicion">
+                                    <input type="tel" class="formulario__seleccion form-control" id="tlf" placeholder="Teléfono celular">
+                                    <span id="errorTlf" class="error"></span>
+                                </div>
                             </div>
                             <div class="formulario__boton">
-                                <button type="submit" class="formulario__btn btn btn-success">Cotizar ahora</button>
+                                <button type="submit" class="formulario__btn btn" onclick="return validar(this.form)" data-toggle="modal" data-target="#hola" id="verificar">Cotizar ahora</button>
+                                    <div class="modal" tabindex="-1" role="dialog" id="ventana">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Título</h5>
+                                                    <button type="button" class="close" data-dismiss="modal">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Contenido de la ventana modal</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                                    <button type="button" class="btn btn-primary">Guardar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                             </div>
                         </form>
                     </div>
@@ -169,6 +220,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/validarFormulario.js"></script>
     <script src="./js/cambioIcono.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

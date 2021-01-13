@@ -6,10 +6,11 @@
         @include size (100%,80vh);
     }
     @include media-breakpoint-up(lg){
-        @include size (100%,74vh);
+        @include size (100%,68vh);
+        margin-bottom: 20px;
     }
     @include media-breakpoint-up(xl){
-        @include size (100%,77vh);
+        @include size (100%,72vh);
     }
     .textPrincipal {
         width: 100%;
@@ -44,7 +45,7 @@
                 line-height: 25px;
                 .textPrincipal__titulo {
                     font-size: 30px;
-                    color: rgb(151, 153, 235);
+                    color: $colorTitulo;
                     font-weight: 600;
                     margin-bottom: 2px;
                     @include media-breakpoint-between(md, lg) {
@@ -56,7 +57,7 @@
                     }
                 }
                 .textPrincipal__texto {
-                    color: #ccc;
+                    color: $coloLetra;
                     margin-bottom: 0;
                     @include media-breakpoint-between(md, lg) {
                         font-size: 1rem;
@@ -78,7 +79,7 @@
             position: absolute;
             width: 100%;
             height: 100px;
-            background-color: darkcyan;
+            background-color: $colorFranja;
         }
         .inicial{
             width: 100%;
@@ -89,10 +90,38 @@
                 padding: 0;
                 .inicial__carousel{
                     @include size (100%,100%);
+                    .inicial__btn{
+                        @include media-breakpoint-up(lg) {
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 100%;
+                            background-color: $white;
+                        }
+                        &--right{
+                            @include media-breakpoint-up(lg) {
+                                left: 17%;
+                                top: 80%;
+                            }
+                            @include media-breakpoint-up(xl) {
+                                left: 13%;
+                                top: 80%;
+                            }
+                        }
+                        &--left{
+                            @include media-breakpoint-up(lg) {
+                                left: 10%;
+                                top: 80%;
+                            }
+                            @include media-breakpoint-up(xl) {
+                                left: 5%;
+                                top: 80%;
+                            }
+                        }
+                    }
                     .inicial__contendorImagenes{
                         @include size (100%, 100%);
                         .inicial__listaImagenes{
-                            @include size (100%, 100%)
+                            @include size (100%, 100%);
                             .inicial__img {
                                 @include size (100%, 100%);
                                 object-fit: cover;
@@ -117,7 +146,7 @@
             position: absolute;
             top: 45%;
             left: 8%;
-            background-color: #ccc;
+            background-color: $colorFormularioFondo;
             @include media-breakpoint-between(md, lg) {
                 width: 35%;
                 top: 42%;
@@ -143,18 +172,38 @@
                     .formulario__seleccion {
                         margin-bottom: 0;
                         width: 100%;
-                        &--long{
-                            @include size (70%, auto);
-                        }
-                        &--small{
-                            @include size (30%, auto);
+                        display: flex;
+                        flex-direction: column;
+                        align-items: end;
+                        &--vehiculos {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            flex-wrap: nowrap;
                         }
                         .formulario__label {
                             display: none;
                             @include media-breakpoint-up(xl) {
                                 display: block;
                                 font-size: 1.125rem;
-                                color: darkgray;
+                                color: $coloLetra;
+                            }
+                        }
+                        .formulario__errorPosicion{
+                            width: 100%;
+                            display: flex;
+                            flex-wrap: nowrap;
+                        }
+                        .formulario__modelo {
+                            width: 70%;
+                            @include media-breakpoint-up(xl) {
+                                width: 45%;
+                            }
+                        }
+                        .formulario__ano {
+                            width: 30%;
+                            @include media-breakpoint-up(xl) {
+                                width: 45%;
                             }
                         }
                     }
@@ -162,6 +211,8 @@
                         @include size(100%, auto);
                         margin-top: 10px;
                         .formulario__btn {
+                            background-color: $colorBoton;
+                            color: $white;
                             @include size (100%,auto);
                         }
                     }

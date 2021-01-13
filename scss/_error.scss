@@ -1,0 +1,12 @@
+.error {
+    color: black;
+    &--sinLlenar{
+        width: 35px;
+        height: 35px;
+        background-color: red;
+        border: 2px solid red;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}

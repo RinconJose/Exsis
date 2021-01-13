@@ -8,7 +8,7 @@
         @include size(100%, 40px);
         position: relative;
         padding: 0;
-        @include media-breakpoint-between(lg, xl) {
+        @include media-breakpoint-up(xl) {
             @include size(100%, 80px);
         }
         .navAsegurados__botonDesplegable {
@@ -17,12 +17,13 @@
         }
         .navAsegurados__icon {
             font-size: 1rem;
+            color: $white;
         }
         .navAsegurados__logo {
             width: 100%;
             text-align: center;
             margin: 0;
-            @include media-breakpoint-up(lg) {
+            @include media-breakpoint-up(xl) {
                 width: 40%;
                 text-align: left;
                 display: flex;
@@ -32,14 +33,14 @@
             .navAsegurados__img-logo {
                 @include size(130px, auto);
                 text-align: center;
-                @include media-breakpoint-up(lg) {
+                @include media-breakpoint-up(xl) {
                     @include size(300px, auto);
                 }
             }
         }
         .navAsegurados__barraDesplegable{
             padding: 10px;
-            background-color: black;
+            background-color: $colorFondoLetra;
             @include media-breakpoint-up(lg){
                 width: 60%;
             }
@@ -49,7 +50,7 @@
             .navAsegurados__contenedorBarraDesplegable{
                 margin: 5px 0 5px 10px;
                 padding: 0 15px;
-                border-left: 2px solid white;
+                border-left: 2px solid $white;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
@@ -71,7 +72,7 @@
                     .navAsegurados__itemLista {
                         list-style: none;
                         .navAsegurados__enlaceLista{
-                            color: $white;
+                            color: $coloLetra;
                             &::after,
                             .after {
                                 margin-left: 9.255rem;
@@ -97,7 +98,7 @@
                             padding: 0;
                             margin: 0;
                             @include media-breakpoint-up(lg){
-                                background-color: rgb(46, 44, 44);
+                                background-color: $colorFondoLetra;
                                 width: 100%;
                             }
                             .navAsegurados__subLista {
@@ -112,7 +113,7 @@
                                 }
                                 .navAsegurados__itemSubLista {
                                     list-style-type: disc;
-                                    color: $white;
+                                    color: $coloLetra;
                                     @include media-breakpoint-up(lg){
                                         list-style: none;
                                         display: inline-block;
